@@ -1,0 +1,54 @@
+.plan {
+    float: left;
+    margin-top: 15px;
+    padding: 3.5mm 5mm;
+    width: 210mm;
+    height: 307mm;
+    border: 1px solid black;
+}
+
+.cardSelector {
+    padding: 6mm;
+    width: 30mm;
+    height: 30mm;
+    float: left;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: center;
+}
+
+button.arrow {
+    font-size: 2em;
+}
+
+button.arrow.selected {
+    background-color: teal;
+}
+
+button.arrow.mirrorFont {
+    transform: scale(-1, 1);
+}
+
+.cardImg {
+    width: 30mm;
+    height: 30mm;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+        -webkit-print-color-adjust: exact;
+    }
+    .plan, .plan * {
+        visibility: visible;
+    }
+    .plan .card .border {
+        visibility: hidden;
+    }
+    .plan {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+    }
+}

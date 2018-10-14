@@ -1,0 +1,66 @@
+.card {
+    margin: 0;
+    /* display: inline-block; */
+    float: left;
+    position: relative;
+    width: 30mm;
+    height: 30mm;
+    box-sizing: border-box;
+}
+
+.card .border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card:hover .border {
+    border: 1px dashed black !important;
+}
+
+.card .border.grid {
+    border: 1px solid gray;
+}
+
+.card .border.selected {
+    border: 3px solid black !important;
+}
+
+.path {
+    position: absolute;
+    background-color: black;
+}
+
+.path.horizontal {
+    top: 12mm;
+    bottom: 12mm;
+    left: 0;
+    right: 0;
+    height: 6mm;
+}
+
+.path.horizontal.left {
+    right: 18mm;
+}
+
+.path.horizontal.right {
+    left: 18mm;
+}
+
+.path.vertical {
+    top: 0;
+    bottom: 0;
+    left: 12mm;
+    right: 12mm;
+    width: 6mm;
+}
+
+.path.vertical.up {
+    bottom: 12mm;
+}
+
+.path.vertical.down {
+    top: 12mm;
+}
